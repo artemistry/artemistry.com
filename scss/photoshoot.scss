@@ -1,0 +1,168 @@
+@use './components/common.scss';
+@use './components/navigation.scss';
+
+img {
+  max-width: 100%;
+  max-height: 900px;
+  margin: 0;
+  padding: 5px;
+}
+
+.build-your {
+  font-size: 25px;
+  font-weight: 400;
+  margin: 40px 0 10px 0;
+  text-transform: uppercase;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 2em;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 50px 0 0 0;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3em;
+  font-weight: 400;
+  line-height: 1.5em;
+  text-align: center;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 50px;
+  margin: 0;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 48px;
+  margin: 50px 0;
+}
+
+h4 {
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 40px;
+  margin: 50px 15%;
+}
+
+p {
+  font-family: Sans-Serif;
+  font-family: "Playfair Display", serif;
+  font-size: 2em;
+  font-weight: 300;
+  margin: 50px 0;
+  word-wrap: break-word;
+  line-height: 1.6em;
+  text-align: center;
+}
+
+.number {
+  display: block;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+.progress {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 40px;
+}
+
+.cta {
+  display: inline-block;
+  border: 2px solid;
+  padding: 20px 30px;
+}
+
+.important {
+  font-style: italic;
+}
+
+.social-link {
+  font-size: 40px;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+.social-link:hover {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  word-wrap: break-word;
+  color: black;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #777;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #777;
+}
+
+.story {
+  display: block;
+  margin: 50px 0;
+  font-style: italic;
+}
+
+.story .fa {
+  display: block;
+  margin: 0 0 5px 0;
+  font-size: 20px;
+}
+
+.go-next,
+.go-previous,
+.go-home {
+  margin: 50px 0;
+  text-align: center;
+  font-size: 23px;
+}
+
+.go-next a,
+.go-previous a,
+.go-home a {
+  font-family: "Playfair Display", serif;
+  font-size: 2em;
+  font-weight: 400;
+  line-height: 1.5em;
+  text-align: center;
+  margin: 25px 0;
+}
+
+.comments {
+  margin: 50px 0;
+}
+
+.written-by {
+  font-size: 16px;
+  text-align: center;
+  color: #777;
+  margin: 20px 0 60px 0;
+}
+
+.copyright {
+  font-family: Sans-Serif;
+  text-transform: uppercase;
+  margin: 0 0 50px 0;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 50px;
+  color: #999;
+}

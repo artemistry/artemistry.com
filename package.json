@@ -1,0 +1,15 @@
+{
+  "name": "artemistry.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/artemistry/artemistry.com.git",
+  "author": "Artemistry <artemistry.com@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "moment": "^2.29.1",
+    "path": "^0.12.7",
+    "prettier": "^2.2.0",
+    "sass": "^1.32.10"
+  }
+}
