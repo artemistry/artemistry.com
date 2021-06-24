@@ -1,12 +1,12 @@
 # Artemistry
 
-http://artemistry.com
-
 ## Install
 
 `yarn`
 
 ## Generate
+
+Add `photoshoots.data.json` file to `./data` directory.
 
 `./generate`
 

@@ -1,5 +1,6 @@
 @use './components/common.scss';
 @use './components/navigation.scss';
+@use './components/copyright.scss';
 
 img {
   max-width: 100%;
@@ -155,14 +156,4 @@ a:hover {
   text-align: center;
   color: #777;
   margin: 20px 0 60px 0;
-}
-
-.copyright {
-  font-family: Sans-Serif;
-  text-transform: uppercase;
-  margin: 0 0 50px 0;
-  white-space: nowrap;
-  font-size: 16px;
-  line-height: 50px;
-  color: #999;
 }

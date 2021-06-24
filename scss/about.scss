@@ -1,5 +1,6 @@
 @use './components/common.scss';
 @use './components/navigation.scss';
+@use './components/copyright.scss';
 
 .feature {
   text-align: center;
@@ -173,16 +174,6 @@ a:hover {
 .footer-navigation a:hover {
   text-decoration: none;
   color: #000;
-}
-
-.copyright {
-  font-family: Sans-Serif;
-  text-transform: uppercase;
-  margin: 50px 0;
-  white-space: nowrap;
-  font-size: 16px;
-  line-height: 50px;
-  color: #999;
 }
 
 ul {
