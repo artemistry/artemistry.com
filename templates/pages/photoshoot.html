@@ -7,9 +7,9 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title><%% title %%> | ARTEMISTRY</title>
+    <title><%% title %%> | <%% name %%></title>
     <meta name="description" content="<%% description %%>" />
-    <meta name="author" content="ARTEMISTRY" />
+    <meta name="author" content="<%% name %%>" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
@@ -34,14 +34,9 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8 offset-md-2">
-          <div class="logo">Artemistry</div>
+          <div class="logo"><%% name %%></div>
 
-          <p class="navigation">
-            <a href="/about"> About </a>
-            <a href="/"> Photoshoots </a>
-            <a href="mailto:artemistry.photography@gmail.com"> Contact </a>
-            <a href="https://www.instagram.com/artemistry/"> Instagram </a>
-          </p>
+          <%% navigation %%>
         </div>
       </div>
     </div>
@@ -70,32 +65,10 @@
       </div>
 
       <div class="row mt-5 mb-5">
-        <div class="col-md-8 offset-md-2">
-          <p class="copyright text-center">Copyright © 2021 Artemistry</p>
-
-          <p class="copyright text-center">
-            All rights reserved. No part of this publication may be reproduced,
-            distributed, or transmitted in any form or by any means, including
-            photocopying, recording, or other electronic or mechanical methods,
-            without the prior written permission of the author.
-          </p>
-        </div>
+        <div class="col-md-8 offset-md-2"><%% copyright %%></div>
       </div>
     </div>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-1519369-37"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-1519369-37");
-    </script>
+    <%% analytics %%>
   </body>
 </html>

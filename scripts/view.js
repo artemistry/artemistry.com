@@ -44,6 +44,18 @@ function setParagraphsInHtmlString({ content, htmlString }) {
   return updatedHtmlString;
 }
 
+function setAnalyticsInHtmlString({ content, htmlString }) {
+  const updatedHtmlString = htmlString.replace(/<%% analytics %%>/gi, content);
+
+  return updatedHtmlString;
+}
+
+function setCopyrightInHtmlString({ content, htmlString }) {
+  const updatedHtmlString = htmlString.replace(/<%% copyright %%>/gi, content);
+
+  return updatedHtmlString;
+}
+
 function setSlugInHtmlString({ content, htmlString }) {
   const updatedHtmlString = htmlString.replace(/<%% slug %%>/gi, content);
 
@@ -91,6 +103,12 @@ function setNextPageInHtmlString({ nextPhotoshoot, htmlString }) {
   return updatedHtmlString;
 }
 
+function setNameInHtmlString({ content, htmlString }) {
+  const updatedHtmlString = htmlString.replace(/<%% name %%>/gi, content);
+
+  return updatedHtmlString;
+}
+
 function setDescriptionInHtmlString({ content, htmlString }) {
   const updatedHtmlString = htmlString.replace(
     /<%% description %%>/gi,
@@ -105,6 +123,12 @@ function setShortDescriptionInHtmlString({ content, htmlString }) {
     /<%% shortDescription %%>/gi,
     content
   );
+
+  return updatedHtmlString;
+}
+
+function setNavigationInHtmlString({ content, htmlString }) {
+  const updatedHtmlString = htmlString.replace(/<%% navigation %%>/gi, content);
 
   return updatedHtmlString;
 }
@@ -259,9 +283,13 @@ function prettifyHtml(html) {
 }
 
 module.exports = {
+  setCopyrightInHtmlString,
+  setAnalyticsInHtmlString,
   setTitleInHtmlString,
+  setNameInHtmlString,
   setDescriptionInHtmlString,
   setShortDescriptionInHtmlString,
+  setNavigationInHtmlString,
   setImagesInHtmlString,
   setParagraphsInHtmlString,
   setSlugInHtmlString,

@@ -8,7 +8,11 @@ const {
 const { compileCssForAllPages } = require("./scss");
 const {
   setTitleInHtmlString,
+  setCopyrightInHtmlString,
+  setAnalyticsInHtmlString,
+  setNameInHtmlString,
   setDescriptionInHtmlString,
+  setNavigationInHtmlString,
   setImagesInHtmlString,
   setParagraphsInHtmlString,
   setSlugInHtmlString,
@@ -18,6 +22,7 @@ const {
   setIndexPhotoshootsInHtmlString,
   prettifyHtml,
 } = require("./view");
+
 function generatePhotoshootPage({
   photoshoot,
   previousPhotoshoot,
@@ -26,15 +31,47 @@ function generatePhotoshootPage({
   const { slug, title, images, paragraphs } = photoshoot;
 
   const config = JSON.parse(readFile({ route: "../data/global.config.json" }));
-  let page = readFile({ route: "../templates/photoshoot.html" });
+  let page = readFile({ route: "../templates/pages/photoshoot.html" });
 
   page = setTitleInHtmlString({
     content: title,
     htmlString: page,
   });
 
+  const analytics = readFile({
+    route: "../templates/partials/analytics.html",
+  });
+
+  page = setAnalyticsInHtmlString({
+    content: analytics,
+    htmlString: page,
+  });
+
+  const copyright = readFile({
+    route: "../templates/partials/copyright.html",
+  });
+
+  page = setCopyrightInHtmlString({
+    content: copyright,
+    htmlString: page,
+  });
+
+  page = setNameInHtmlString({
+    content: config.name,
+    htmlString: page,
+  });
+
   page = setDescriptionInHtmlString({
     content: config.description,
+    htmlString: page,
+  });
+
+  const navigation = readFile({
+    route: "../templates/partials/navigation.html",
+  });
+
+  page = setNavigationInHtmlString({
+    content: navigation,
     htmlString: page,
   });
 
@@ -96,15 +133,52 @@ function generateIndexPage() {
   photoshoots = filterByPublishedOnHomePage(photoshoots);
 
   const config = JSON.parse(readFile({ route: "../data/global.config.json" }));
-  let page = readFile({ route: "../templates/index.html" });
+  let page = readFile({ route: "../templates/pages/index.html" });
 
   page = setTitleInHtmlString({
     content: config.description,
     htmlString: page,
   });
 
+  const analytics = readFile({
+    route: "../templates/partials/analytics.html",
+  });
+
+  page = setAnalyticsInHtmlString({
+    content: analytics,
+    htmlString: page,
+  });
+
+  const copyright = readFile({
+    route: "../templates/partials/copyright.html",
+  });
+
+  page = setCopyrightInHtmlString({
+    content: copyright,
+    htmlString: page,
+  });
+
+  page = setNameInHtmlString({
+    content: config.name,
+    htmlString: page,
+  });
+
+  page = setDescriptionInHtmlString({
+    content: config.description,
+    htmlString: page,
+  });
+
   page = setShortDescriptionInHtmlString({
     content: config.shortDescription,
+    htmlString: page,
+  });
+
+  const navigation = readFile({
+    route: "../templates/partials/navigation.html",
+  });
+
+  page = setNavigationInHtmlString({
+    content: navigation,
     htmlString: page,
   });
 
@@ -118,15 +192,52 @@ function generateIndexPage() {
 
 function generateAboutPage() {
   const config = JSON.parse(readFile({ route: "../data/global.config.json" }));
-  let page = readFile({ route: "../templates/about.html" });
+  let page = readFile({ route: "../templates/pages/about.html" });
 
   page = setTitleInHtmlString({
     content: config.description,
     htmlString: page,
   });
 
+  const analytics = readFile({
+    route: "../templates/partials/analytics.html",
+  });
+
+  page = setAnalyticsInHtmlString({
+    content: analytics,
+    htmlString: page,
+  });
+
+  const copyright = readFile({
+    route: "../templates/partials/copyright.html",
+  });
+
+  page = setCopyrightInHtmlString({
+    content: copyright,
+    htmlString: page,
+  });
+
+  page = setNameInHtmlString({
+    content: config.name,
+    htmlString: page,
+  });
+
+  page = setDescriptionInHtmlString({
+    content: config.description,
+    htmlString: page,
+  });
+
   page = setShortDescriptionInHtmlString({
     content: config.shortDescription,
+    htmlString: page,
+  });
+
+  const navigation = readFile({
+    route: "../templates/partials/navigation.html",
+  });
+
+  page = setNavigationInHtmlString({
+    content: navigation,
     htmlString: page,
   });
 
