@@ -51,7 +51,11 @@ function setAnalyticsInHtmlString({ content, htmlString }) {
 }
 
 function setCopyrightInHtmlString({ content, htmlString }) {
-  const updatedHtmlString = htmlString.replace(/<%% copyright %%>/gi, content);
+  let updatedHtmlString = htmlString.replace(/<%% copyright %%>/gi, content);
+  updatedHtmlString = updatedHtmlString.replace(
+    /<%% year %%>/gi,
+    new Date().getFullYear()
+  );
 
   return updatedHtmlString;
 }
